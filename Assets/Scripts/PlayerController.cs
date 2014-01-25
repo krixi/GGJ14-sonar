@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour {
 		//rigidbody2D.velocity = new Vector2 (currentMovement, 0f) * speed;
 		rigidbody2D.AddForce ( new Vector2 (currentMovement, 0f) * speed);
 
-		rigidbody2D.velocity = new Vector2(Mathf.Min (maxSpeed, rigidbody2D.velocity.x), rigidbody2D.velocity.y);
+		if (rigidbody2D.velocity.x > 0) {
+			rigidbody2D.velocity = new Vector2(Mathf.Min (maxSpeed, rigidbody2D.velocity.x), rigidbody2D.velocity.y);
+		} else {
+			rigidbody2D.velocity = new Vector2(Mathf.Max (-maxSpeed, rigidbody2D.velocity.x), rigidbody2D.velocity.y);
+		}
 	}
 }
