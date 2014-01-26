@@ -3,7 +3,8 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour {
-	
+
+	public PlayerStats stats;
 
 	private float currentMovement = 0f;
 
@@ -13,10 +14,18 @@ public class PlayerController : MonoBehaviour {
 
 	public float jumpForce = 5f;
 
+	public float energyPerJump = 10f;
+
 	private bool jumped = false;
 
 	public event System.Action OnWingsFlapStarted;
 	public event System.Action OnWingsFlapEnded;
+
+	void Start () {
+		if (stats == null) {
+			stats = GetComponent<PlayerStats>();
+		}
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -26,8 +35,9 @@ public class PlayerController : MonoBehaviour {
 
 		// Check for wing flapping
 		if (Input.GetAxis("Jump") != 0f) {
-			if (!jumped) { 
+			if (!jumped && (stats.energy >= energyPerJump)) {
 				rigidbody.AddForce (new Vector3 (0f, jumpForce));
+				stats.energy -= energyPerJump;
 				jumped = true;
 				// Send the event to listeners
 				if (OnWingsFlapStarted != null) {
