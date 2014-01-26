@@ -19,40 +19,38 @@ public class GameManager : MonoSingleton<GameManager> {
 	public int totalLevels = 2;
 
 	/// <summary>
-	/// The name of the menu scene.
-	/// TODO: need a main menu to load
-	/// </summary>
-	public string menuSceneName = "MainMenu";
-
-	/// <summary>
 	/// The finished game scene.
-	/// TODO: need a game complete scene to load.
 	/// </summary>
 	public string finishedGameScene = "GameComplete";
 
 	/// <summary>
 	/// The current level.
 	/// </summary>
-	private int currentLevel = 0;
+	private int currentLevel = 1;
+
+	public int CurrentLevel {
+		get { return currentLevel; }
+	}
 	
 
 	protected override void Init ()
 	{
 		base.Init ();
+<<<<<<< HEAD
 		currentLevel = PlayerPrefs.GetInt ("PlayerLevel", 0);
+=======
+>>>>>>> master
 	}
 
 	/// <summary>
 	/// Loads the next level.
 	/// </summary>
 	public void LoadNextLevel () {
-		if (currentLevel+1 < totalLevels) {
+		if (currentLevel+1 <= totalLevels) {
 			currentLevel++;
-			PlayerPrefs.SetInt ("PlayerLevel", currentLevel);
-			PlayerPrefs.Save ();
 			Application.LoadLevel (string.Format(levelNameFormat, currentLevel));
 		} else {
-			Debug.LogError ("No more levels!");
+			Application.LoadLevel (finishedGameScene);
 		}
 	}
 

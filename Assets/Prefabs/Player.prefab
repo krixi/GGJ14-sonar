@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthLostPerCollision: 20
   maxHealth: 100
   healthBar: {fileID: 11400012}
   energy: 100
@@ -290,9 +291,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011dca2a5dcf74d728753a77217a72e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 0}
   speed: 2.5
   maxSpeed: 10
   jumpForce: 50
+  energyPerJump: 5
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
