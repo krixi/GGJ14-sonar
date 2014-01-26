@@ -74,6 +74,50 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &4456512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: efabaac7a394e4c30825daee4101ac4c, type: 2}
+  m_PrefabInternal: {fileID: 1034110291}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4456513}
+  - 114: {fileID: 4456514}
+  m_Layer: 0
+  m_Name: EnergyBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4456513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: efabaac7a394e4c30825daee4101ac4c, type: 2}
+  m_PrefabInternal: {fileID: 1034110291}
+  m_GameObject: {fileID: 4456512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.4261036, y: -1.11051095, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1603599994}
+--- !u!114 &4456514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: efabaac7a394e4c30825daee4101ac4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1034110291}
+  m_GameObject: {fileID: 4456512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e433a35535270479fa033fe4a2203b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barDisplay: 1
+  pos: {x: 20, y: 90}
+  size: {x: 200, y: 50}
+  emptyTex: {fileID: 2800000, guid: 29d12d13d95f84b078a72b6a9f0999c1, type: 3}
+  fullTex: {fileID: 2800000, guid: 68087221725584e21a4a9efae99e75a1, type: 3}
 --- !u!1001 &11309076
 Prefab:
   m_ObjectHideFlags: 0
@@ -576,31 +620,31 @@ Transform:
   - {fileID: 1758668338}
   - {fileID: 292941570}
   - {fileID: 1549665198}
-  - {fileID: 1152618616}
-  - {fileID: 1790197610}
-  - {fileID: 2136896043}
-  - {fileID: 1925183443}
-  - {fileID: 628922646}
-  - {fileID: 1191706495}
-  - {fileID: 2046153568}
-  - {fileID: 614337573}
   - {fileID: 1695036416}
-  - {fileID: 341819865}
-  - {fileID: 57943194}
-  - {fileID: 1463399712}
-  - {fileID: 1459067815}
-  - {fileID: 1568927119}
-  - {fileID: 644868587}
-  - {fileID: 1925499357}
-  - {fileID: 1181841539}
   - {fileID: 1170165918}
-  - {fileID: 1753504254}
-  - {fileID: 485907203}
-  - {fileID: 336662035}
-  - {fileID: 1501755675}
-  - {fileID: 1580746741}
-  - {fileID: 1215329788}
+  - {fileID: 1181841539}
+  - {fileID: 1568927119}
+  - {fileID: 1925499357}
+  - {fileID: 1925183443}
+  - {fileID: 614337573}
   - {fileID: 527426783}
+  - {fileID: 336662035}
+  - {fileID: 1790197610}
+  - {fileID: 1191706495}
+  - {fileID: 1580746741}
+  - {fileID: 2046153568}
+  - {fileID: 1152618616}
+  - {fileID: 1501755675}
+  - {fileID: 57943194}
+  - {fileID: 644868587}
+  - {fileID: 1459067815}
+  - {fileID: 1753504254}
+  - {fileID: 628922646}
+  - {fileID: 1215329788}
+  - {fileID: 2136896043}
+  - {fileID: 341819865}
+  - {fileID: 485907203}
+  - {fileID: 1463399712}
   - {fileID: 1786185262}
   - {fileID: 887907773}
   - {fileID: 681906366}
@@ -1392,6 +1436,50 @@ Transform:
   m_LocalScale: {x: 5.48685837, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 140113603}
+--- !u!1 &281053286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: efabaac7a394e4c30825daee4101ac4c, type: 2}
+  m_PrefabInternal: {fileID: 1034110291}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 281053287}
+  - 114: {fileID: 281053288}
+  m_Layer: 0
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &281053287
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: efabaac7a394e4c30825daee4101ac4c, type: 2}
+  m_PrefabInternal: {fileID: 1034110291}
+  m_GameObject: {fileID: 281053286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.4261036, y: -1.11051059, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1603599994}
+--- !u!114 &281053288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400012, guid: efabaac7a394e4c30825daee4101ac4c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1034110291}
+  m_GameObject: {fileID: 281053286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e433a35535270479fa033fe4a2203b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barDisplay: 1
+  pos: {x: 20, y: 40}
+  size: {x: 200, y: 50}
+  emptyTex: {fileID: 2800000, guid: 29d12d13d95f84b078a72b6a9f0999c1, type: 3}
+  fullTex: {fileID: 2800000, guid: 08bd2799534dd46f684f8065435bbf35, type: 3}
 --- !u!1 &281967142
 GameObject:
   m_ObjectHideFlags: 0
@@ -8537,9 +8625,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 100
+  healthBar: {fileID: 281053288}
   energy: 100
   maxEnergy: 100
-  energyRestoreRate: 5
+  energyRestoreRate: 10
+  energyBar: {fileID: 4456514}
 --- !u!4 &1603599994
 Transform:
   m_ObjectHideFlags: 0
@@ -8552,6 +8643,8 @@ Transform:
   m_Children:
   - {fileID: 463302123}
   - {fileID: 179113341}
+  - {fileID: 281053287}
+  - {fileID: 4456513}
   m_Father: {fileID: 0}
 --- !u!114 &1603599995
 MonoBehaviour:
