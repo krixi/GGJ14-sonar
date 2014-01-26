@@ -18,6 +18,11 @@ public class EchoSphere : MonoBehaviour {
 	public float fade = 0.0f;
 	public float pulse_frequency = 5.0f;
 	private float deltaTime = 0.0f;
+
+	/// <summary>
+	/// Occurs when on pulse started.
+	/// </summary>
+	public event System.Action OnPulseStarted;
 	
 	// Use this for initialization
 	void Start () {
@@ -49,6 +54,9 @@ public class EchoSphere : MonoBehaviour {
 		sphereCurrentRadius = 0.0f;
 		fade = 0.0f;
 		is_animated = true;
+		if (OnPulseStarted != null) {
+			OnPulseStarted();
+		}
 	}
 	
 	// Called to halt an echo pulse.
