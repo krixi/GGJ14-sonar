@@ -3,9 +3,8 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour {
-
-	public Transform playerSprite;
 	
+
 	private float currentMovement = 0f;
 
 	public float speed = 2f;
@@ -15,6 +14,9 @@ public class PlayerController : MonoBehaviour {
 	public float jumpForce = 5f;
 
 	private bool jumped = false;
+
+	public event System.Action OnWingsFlapStarted;
+	public event System.Action OnWingsFlapEnded;
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -26,16 +28,19 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetAxis("Jump") != 0f) {
 			if (!jumped) { 
 				rigidbody.AddForce (new Vector3 (0f, jumpForce));
-				if (playerSprite != null) {
-					playerSprite.transform.localScale = new Vector3 (playerSprite.transform.localScale.x, -playerSprite.transform.localScale.y, playerSprite.transform.localScale.z);
-				}
 				jumped = true;
+				// Send the event to listeners
+				if (OnWingsFlapStarted != null) {
+					OnWingsFlapStarted ();
+				}
 			}
 		} else {
-			if (playerSprite != null && jumped) {
-				playerSprite.transform.localScale = new Vector3 (playerSprite.transform.localScale.x, -playerSprite.transform.localScale.y, playerSprite.transform.localScale.z);
+			if (jumped) {
+				jumped = false;
+				if (OnWingsFlapEnded != null) {
+					OnWingsFlapEnded ();
+				}
 			}
-			jumped = false;
 		}
 
 		// Get horizontal movement

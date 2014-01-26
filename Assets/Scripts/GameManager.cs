@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameManager : ResourceSingleton<GameManager> {
+public class GameManager : MonoSingleton<GameManager> {
 	public List<string> levels = new List<string>();
 
 	private int currentLevel = 0;
 
-	public override void Init ()
+	protected override void Init ()
 	{
 		base.Init ();
 		PlayerPrefs.DeleteKey("PlayerLevel");

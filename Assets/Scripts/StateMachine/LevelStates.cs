@@ -10,6 +10,7 @@ namespace LevelStates
 	public enum Transition
 	{
 		NullTransition = 0, // Use this transition to represent a non-existing transition in your system
+		LoadFinished,
 		PauseGame,
 		ResumeGame,
 		ObjectiveReached,
@@ -23,10 +24,33 @@ namespace LevelStates
 	public enum StateID
 	{
 		NullStateID = 0, // Use this ID to represent a non-existing State in your system
+		LoadingLevel,
 		Playing,
 		Paused,
 		LevelComplete,
 		LevelFailed,
+	};
+
+	/// <summary>
+	/// Loading level state.
+	/// </summary>
+	public class LoadingLevelState : FSMState <Transition, StateID> {
+		public LoadingLevelState () : base () {
+			// Set the state ID
+			stateID = StateID.LoadingLevel;
+			// Add transitions.
+			AddTransition (Transition.LoadFinished, StateID.Playing);
+		}
+		
+		public override void Reason (GameObject player, GameObject npc)
+		{
+			// nothing to do; wait for player input
+		}
+		public override void Act (GameObject player, GameObject npc)
+		{
+			// Automatically transition into the playing state now that we are up and running.
+			PerformTransition (Transition.LoadFinished);
+		}
 	};
 
 	/// <summary>
@@ -47,6 +71,12 @@ namespace LevelStates
 		public override void Act (GameObject player, GameObject npc)
 		{
 			// nothing to do; wait for player input
+		}
+		public override void DoBeforeEntering (GameObject player, GameObject npc)
+		{
+			base.DoBeforeEntering (player, npc);
+			// Make sure the sound is playing.
+			SoundManager.instance.PlayAmbient ();
 		}
 	};
 
