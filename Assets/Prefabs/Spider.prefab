@@ -97,14 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1d2cf4cf4c0ea46bced0ed755c7678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posOffsetY: 10
-  negOffsetY: -10
-  posOffsetX: 0
-  negOffsetX: 0
-  offsetA: {x: 0, y: 0, z: 0}
-  offsetB: {x: 0, y: 0, z: 0}
-  posA: {x: 0, y: 0, z: 0}
-  posB: {x: 0, y: 0, z: 0}
+  offsetA: {x: 0, y: 3.33999991, z: 0}
+  offsetB: {x: 0, y: -8.61999989, z: 0}
   patrolTimeRoundTrip: 10
   movingTowardA: 0
   lastDistTillTarget: 0
