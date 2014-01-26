@@ -76,7 +76,7 @@ namespace LevelStates
 		{
 			base.DoBeforeEntering (player, npc);
 			// Make sure the sound is playing.
-			SoundManager.instance.PlayAmbient ();
+			SoundManager.instance.PlayMusic ();
 		}
 	};
 

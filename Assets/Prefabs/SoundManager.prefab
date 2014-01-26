@@ -36,7 +36,7 @@ AudioSource:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b8f58973b19a545a3a08048970e9aa6c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -97,11 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9668b7745a194f2eadb12ae71182f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
-  ambient:
-  - {fileID: 8300000, guid: 0ee7bdfa7a5cc4b6db073f1f6987a674, type: 3}
-  ambientSource: {fileID: 8200000}
-  playAmbientAutomatically: 1
+  dontDestroyOnLoad: 1
+  musicSource: {fileID: 8200000}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

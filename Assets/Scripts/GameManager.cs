@@ -50,6 +50,11 @@ public class GameManager : MonoSingleton<GameManager> {
 		}
 	}
 
+	public void LoadFirstLevel () {
+		currentLevel = 0;
+		LoadNextLevel ();
+	}
+
 	public void RestartCurrentLevel() {
 		Application.LoadLevel (Application.loadedLevel);
 	}
