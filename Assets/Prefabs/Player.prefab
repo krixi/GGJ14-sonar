@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400002}
+  echos: {fileID: 11400006}
   flapUpSounds:
   - {fileID: 8300000, guid: 2b9008346fc7b407f9b95d28ce059aeb, type: 3}
   - {fileID: 8300000, guid: 711b5621f20f44e3eb32bf11c6a949a3, type: 3}
@@ -347,6 +348,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 565c6cac6a4ed4a2284a62b2cf48be2d, type: 3}
   - {fileID: 8300000, guid: aa76f593ee45d42fe9f6802370581477, type: 3}
   - {fileID: 8300000, guid: f79444242559447bea956d94526215ba, type: 3}
+  squeakSounds:
+  - {fileID: 8300000, guid: 11169955e9a254934be459a707820d00, type: 3}
+  - {fileID: 8300000, guid: 28c27e4c87f4e4e7cae8f42512f8ed86, type: 3}
+  - {fileID: 8300000, guid: 2d35905d3685342368ff440febabce44, type: 3}
+  - {fileID: 8300000, guid: 7a76e47b9f5df4c98837ff657da6deac, type: 3}
+  - {fileID: 8300000, guid: 85a19a407899a40f8894181802f33bed, type: 3}
+  - {fileID: 8300000, guid: 867511b0bb76744e1be3cbb06f630505, type: 3}
+  - {fileID: 8300000, guid: ab2c8e29bfcd24bcfb921a6a2a572d67, type: 3}
+  - {fileID: 8300000, guid: abfb94bb3c85e4c5cae8c04a4e114426, type: 3}
+  - {fileID: 8300000, guid: b7b77014be2844ea0ae1c2565833a5b7, type: 3}
+  - {fileID: 8300000, guid: be2ef4a7a4991412fa5bad7c8e799c06, type: 3}
+  - {fileID: 8300000, guid: c15dcd18f8e514a128d656284eb68c93, type: 3}
+  - {fileID: 8300000, guid: c60fa6a86668a40f288c50b431bc9ee5, type: 3}
+  - {fileID: 8300000, guid: fc1792f9b145a4df5ad4ba8167664bc2, type: 3}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
