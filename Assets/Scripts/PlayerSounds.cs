@@ -6,6 +6,9 @@ using System.Collections;
 public class PlayerSounds : MonoBehaviour {
 
 	public PlayerController player;
+
+	public AudioClip[] flapUpSounds;
+	public AudioClip[] flapDownSounds;
 	
 	// Use this for initialization
 	void Start () {
@@ -18,11 +21,15 @@ public class PlayerSounds : MonoBehaviour {
 
 	void HandleOnWingsFlapEnded ()
 	{
-		audio.Stop ();
+		if (flapUpSounds.Length > 0) {
+			audio.PlayOneShot (flapUpSounds[ Random.Range(0, flapUpSounds.Length) ]);
+		}
 	}
 
 	void HandleOnWingsFlapStarted ()
 	{
-		audio.Play ();
+		if (flapDownSounds.Length > 0) {
+			audio.PlayOneShot (flapDownSounds[ Random.Range(0, flapDownSounds.Length) ]);
+		}
 	}
 }

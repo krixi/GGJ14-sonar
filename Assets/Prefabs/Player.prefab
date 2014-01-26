@@ -96,7 +96,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.380928, y: 1.168576, z: 0}
+  m_LocalPosition: {x: -17.4286118, y: -1.09927368, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -337,6 +337,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11400002}
+  flapUpSounds:
+  - {fileID: 8300000, guid: 2b9008346fc7b407f9b95d28ce059aeb, type: 3}
+  - {fileID: 8300000, guid: 711b5621f20f44e3eb32bf11c6a949a3, type: 3}
+  - {fileID: 8300000, guid: aac5150733794490dafab776337e7f4c, type: 3}
+  - {fileID: 8300000, guid: b250a64c2a7a24c27934b9cfe001421e, type: 3}
+  flapDownSounds:
+  - {fileID: 8300000, guid: 4b83542a0a5ca47219cec654f9a0e341, type: 3}
+  - {fileID: 8300000, guid: 565c6cac6a4ed4a2284a62b2cf48be2d, type: 3}
+  - {fileID: 8300000, guid: aa76f593ee45d42fe9f6802370581477, type: 3}
+  - {fileID: 8300000, guid: f79444242559447bea956d94526215ba, type: 3}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
