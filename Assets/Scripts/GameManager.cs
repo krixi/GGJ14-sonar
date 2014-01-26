@@ -36,10 +36,6 @@ public class GameManager : MonoSingleton<GameManager> {
 	protected override void Init ()
 	{
 		base.Init ();
-<<<<<<< HEAD
-		currentLevel = PlayerPrefs.GetInt ("PlayerLevel", 0);
-=======
->>>>>>> master
 	}
 
 	/// <summary>
