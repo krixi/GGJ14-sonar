@@ -37,8 +37,8 @@ public class EchoSphere : MonoBehaviour {
 		} else {
 			deltaTime += Time.deltaTime;
 		}
-		
-		UpdateRayCast();
+
+		CheckForInput ();
 		UpdateEcho();
 		UpdateShader();
 	}
@@ -62,21 +62,12 @@ public class EchoSphere : MonoBehaviour {
 		is_animated = false;
 	}
 	
-	// Called to manually place echo pulse
-	void UpdateRayCast() {
+	// Called to manually trigger echo pulse
+	void CheckForInput() {
 		if(!is_manual)return;
 		if (Input.GetButtonDown("Fire1")){
-			Debug.Log("Mouse Click");
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		  	RaycastHit hit;
-	        	if (Physics.Raycast(ray,out hit, 10000)) {
-	            		Debug.Log("Hit Something");
-				TriggerPulse();
-				transform.position = hit.point;
-			}
+			TriggerPulse();
 		}
-	        
-	
 	}
 	
 	// Called to update the echo front edge

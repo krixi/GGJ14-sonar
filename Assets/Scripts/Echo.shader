@@ -1,6 +1,6 @@
 Shader "Custom/Echo" {
 	Properties {
-		_MainTex ("Base (RGB)", 2D) = "white" {}
+		_MainTex ("Base (RGB)", 2D) = "black" {}
 		_MainColor ("Main Color",Color) = (1.0,1.0,1.0,1.0)	// Color of echo
 		_Position ("Position",Vector) = (0.0,0.0,0.0)		// 
 		_Radius ("Radius",float) = 5.0

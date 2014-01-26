@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour {
+
+	public Transform playerSprite;
 	
 	private float currentMovement = 0f;
 
@@ -16,17 +18,23 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (rigidbody2D == null) {
+		if (rigidbody == null) {
 			throw new System.InvalidOperationException ("No rigidbody");
 		}
 
 		// Check for wing flapping
 		if (Input.GetAxis("Jump") != 0f) {
 			if (!jumped) { 
-				rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+				rigidbody.AddForce (new Vector3 (0f, jumpForce));
+				if (playerSprite != null) {
+					playerSprite.transform.localScale = new Vector3 (playerSprite.transform.localScale.x, -playerSprite.transform.localScale.y, playerSprite.transform.localScale.z);
+				}
 				jumped = true;
 			}
 		} else {
+			if (playerSprite != null && jumped) {
+				playerSprite.transform.localScale = new Vector3 (playerSprite.transform.localScale.x, -playerSprite.transform.localScale.y, playerSprite.transform.localScale.z);
+			}
 			jumped = false;
 		}
 
@@ -34,13 +42,13 @@ public class PlayerController : MonoBehaviour {
 		currentMovement = Input.GetAxis ("Horizontal");
 
 		// Set the velocity
-		//rigidbody2D.velocity = new Vector2 (currentMovement, 0f) * speed;
-		rigidbody2D.AddForce ( new Vector2 (currentMovement, 0f) * speed);
+		//rigidbody.velocity = new Vector3 (currentMovement, 0f) * speed;
+		rigidbody.AddForce ( new Vector3 (currentMovement, 0f) * speed);
 
-		if (rigidbody2D.velocity.x > 0) {
-			rigidbody2D.velocity = new Vector2(Mathf.Min (maxSpeed, rigidbody2D.velocity.x), rigidbody2D.velocity.y);
+		if (rigidbody.velocity.x > 0) {
+			rigidbody.velocity = new Vector3(Mathf.Min (maxSpeed, rigidbody.velocity.x), rigidbody.velocity.y);
 		} else {
-			rigidbody2D.velocity = new Vector2(Mathf.Max (-maxSpeed, rigidbody2D.velocity.x), rigidbody2D.velocity.y);
+			rigidbody.velocity = new Vector3(Mathf.Max (-maxSpeed, rigidbody.velocity.x), rigidbody.velocity.y);
 		}
 	}
 }

@@ -24,11 +24,11 @@ Material:
       data:
         first:
           name: _Radius
-        second: 9.04575634
+        second: 1.71797991
       data:
         first:
           name: _MaxRadius
-        second: 22.8299999
+        second: 30
       data:
         first:
           name: _EchoFade
@@ -36,7 +36,7 @@ Material:
       data:
         first:
           name: _MaxFade
-        second: 1.13808572
+        second: 1.5
       data:
         first:
           name: _SphereRadius
@@ -49,11 +49,11 @@ Material:
       data:
         first:
           name: _MainColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 1, g: 1, b: 1, a: .835294127}
       data:
         first:
           name: _Position
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: -7.51164007, g: -1.56807911, b: 0, a: 0}
       data:
         first:
           name: _SpherePosition

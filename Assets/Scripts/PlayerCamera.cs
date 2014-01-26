@@ -4,16 +4,13 @@ using System.Collections;
 public class PlayerCamera : MonoBehaviour {
 
 	public Vector3 myPos = new Vector3(0,0,-3);
+
+	public float followSpeed = 5f;
 	
 	public Transform myPlay;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
-	void Update () {
-		transform.position = myPlay.position + myPos;
+	void LateUpdate () {
+		transform.position = Vector3.Lerp(transform.position, myPlay.position + myPos, followSpeed * Time.deltaTime);
 	}
 }
