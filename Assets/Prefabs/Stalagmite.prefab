@@ -24,7 +24,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
   m_LocalPosition: {x: 3.31593204, y: 4.52000475, z: 0}
   m_LocalScale: {x: 1.19741833, y: 1.1974175, z: 1.12007129}
   m_Children: []
@@ -69,7 +69,7 @@ MeshCollider:
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: bac7e56b63d064a18879dfb4df8dc487, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 8b23154599abb4b03b2ff3c204bde626, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

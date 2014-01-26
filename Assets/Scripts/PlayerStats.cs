@@ -9,6 +9,11 @@ public class PlayerStats : MonoBehaviour {
 	public float health = 100f;
 
 	/// <summary>
+	/// The health lost per collision.
+	/// </summary>
+	public float healthLostPerCollision = 20f;
+
+	/// <summary>
 	/// The max health.
 	/// </summary>
 	public float maxHealth = 100f;
@@ -59,5 +64,17 @@ public class PlayerStats : MonoBehaviour {
 		if (healthBar != null) {
 			healthBar.barDisplay = (health / maxHealth);
 		}
+	}
+
+	void OnCollisionEnter(Collision collision) {
+		/* Left this in incase we want to play sound on wall collision
+		 * foreach (ContactPoint contact in collision.contacts) {
+			Debug.DrawRay(contact.point, contact.normal, Color.white);
+		}
+		if (collision.relativeVelocity.magnitude > 2)
+			audio.Play();*/
+		
+		// Lose health when colliding with terrtain
+		SetHealth(Mathf.Max (health - healthLostPerCollision, 0));
 	}
 }
