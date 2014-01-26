@@ -11,7 +11,7 @@ public abstract class MonoFSM<T, S> : MonoBehaviour where S : IComparable {
 	/// <summary>
 	/// Whether or not this object is destroyed when a level is loaded.
 	/// </summary>
-	public bool persistent = true;
+	public bool dontDestroyOnLoad = true;
 	
 	/// <summary>
 	/// The state machine.
@@ -35,7 +35,7 @@ public abstract class MonoFSM<T, S> : MonoBehaviour where S : IComparable {
 
 	// Use this for initialization
 	protected virtual void Start () {
-		if (persistent) {
+		if (dontDestroyOnLoad) {
 			DontDestroyOnLoad (gameObject);
 		}
 		
