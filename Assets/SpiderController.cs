@@ -6,14 +6,10 @@ public class SpiderController : MonoBehaviour {
 	/// <summary>
 	/// Spider will patrol between his position + offsetA and position + offsetB
 	/// </summary>
-	public float posOffsetY = 10f;
-	public float negOffsetY = -10f;
-	public float posOffsetX = 0f;
-	public float negOffsetX = 0f;
 	public Vector3 offsetA;
 	public Vector3 offsetB;
-	public Vector3 posA;
-	public Vector3 posB;
+	private Vector3 posA;
+	private Vector3 posB;
 	public float patrolTimeRoundTrip = 10f; // seconds
 	public bool movingTowardA;
 	/// <summary>
@@ -23,8 +19,6 @@ public class SpiderController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		offsetA = new Vector3(posOffsetX,posOffsetY,0);
-		offsetB = new Vector3(negOffsetX,negOffsetY,0);
 		posA = transform.position + offsetA;
 		posB = transform.position + offsetB;
 		movingTowardA = true;
@@ -64,5 +58,12 @@ public class SpiderController : MonoBehaviour {
 				lastDistTillTarget = distToTarget;
 			}
 		}
+	}
+
+	void OnDrawGizmosSelected() {
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere (transform.position + offsetA, 1f);
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireSphere (transform.position + offsetB, 1f);
 	}
 }
