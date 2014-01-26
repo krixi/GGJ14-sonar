@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Camera : MonoBehaviour {
+public class PlayerCamera : MonoBehaviour {
 
 	public Vector3 myPos = new Vector3(0,0,-3);
 	
