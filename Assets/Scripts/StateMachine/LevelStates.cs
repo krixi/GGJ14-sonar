@@ -89,7 +89,7 @@ namespace LevelStates
 	public class LevelFailedState : FSMState <Transition, StateID> {
 		public LevelFailedState () : base () {
 			// Set the state ID
-			stateID = StateID.LevelComplete;
+			stateID = StateID.LevelFailed;
 			// Add transitions.
 			//AddTransition (Transition.ResumeGame, StateID.Playing);
 
