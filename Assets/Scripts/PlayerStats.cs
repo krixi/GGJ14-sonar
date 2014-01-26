@@ -64,6 +64,9 @@ public class PlayerStats : MonoBehaviour {
 		if (healthBar != null) {
 			healthBar.barDisplay = (health / maxHealth);
 		}
+		if (health <= 0) {
+			GameManager.instance.RestartCurrentLevel();
+		}
 	}
 
 	void OnCollisionEnter(Collision collision) {

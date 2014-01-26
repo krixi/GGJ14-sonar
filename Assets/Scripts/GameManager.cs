@@ -39,7 +39,6 @@ public class GameManager : MonoSingleton<GameManager> {
 	protected override void Init ()
 	{
 		base.Init ();
-		PlayerPrefs.DeleteKey("PlayerLevel");
 		currentLevel = PlayerPrefs.GetInt ("PlayerLevel", 0);
 	}
 
@@ -55,5 +54,9 @@ public class GameManager : MonoSingleton<GameManager> {
 		} else {
 			Debug.LogError ("No more levels!");
 		}
+	}
+
+	public void RestartCurrentLevel() {
+		Application.LoadLevel (Application.loadedLevel);
 	}
 }
