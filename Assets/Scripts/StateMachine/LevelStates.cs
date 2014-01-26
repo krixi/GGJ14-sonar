@@ -72,12 +72,6 @@ namespace LevelStates
 		{
 			// nothing to do; wait for player input
 		}
-		public override void DoBeforeEntering (GameObject player, GameObject npc)
-		{
-			base.DoBeforeEntering (player, npc);
-			// Make sure the sound is playing.
-			SoundManager.instance.PlayMusic ();
-		}
 	};
 
 	public class PausedState : FSMState <Transition, StateID> {

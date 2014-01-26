@@ -6,21 +6,30 @@ public class PlayerAnimations : MonoBehaviour {
 	
 	public PlayerController player;
 
-	public Transform playerSprite;
+	public SpriteRenderer spriteRenderer;
+	public Sprite flapUpSprite;
+	public Sprite flapDownSprite;
 
 	// Use this for initialization
 	void Start () {
 		if (player == null) {
 			player = GetComponent<PlayerController>();
 		}
-		player.OnWingsFlapStarted += HandleWingsFlap;
-		player.OnWingsFlapEnded += HandleWingsFlap;
+		player.OnWingsFlapStarted += HandleOnWingsFlapStarted;
+		player.OnWingsFlapEnded += HandleOnWingsFlapEnded;
 	}
 
-	void HandleWingsFlap ()
+	void HandleOnWingsFlapEnded ()
 	{
-		if (playerSprite != null) {
-			playerSprite.transform.localScale = new Vector3 (playerSprite.transform.localScale.x, -playerSprite.transform.localScale.y, playerSprite.transform.localScale.z);
+		if (spriteRenderer != null) {
+			spriteRenderer.sprite = flapUpSprite;
 		}
+	}
+
+	void HandleOnWingsFlapStarted ()
+	{
+		if (spriteRenderer != null) {
+			spriteRenderer.sprite = flapDownSprite;
+		}		
 	}
 }

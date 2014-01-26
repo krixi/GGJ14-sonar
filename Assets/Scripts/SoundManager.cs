@@ -9,11 +9,24 @@ public class SoundManager : MonoSingleton<SoundManager> {
 
 	public AudioSource musicSource;
 
+	public AudioClip musicClip;
+
 	public void PlayMusic () {
 		if (musicSource == null) {
-			throw new System.NullReferenceException ("Music Source must be set");
+			musicSource = GetComponent<AudioSource>();
 		}
+
+		if (musicSource.isPlaying) {
+			return;
+		}
+
+		musicSource.clip = musicClip;
 		musicSource.Play ();
+
+		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+		if (player != null) {
+			transform.parent = player.transform;
+		}
 	}
 
 	public void StopMusic () {
