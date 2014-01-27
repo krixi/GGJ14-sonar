@@ -102,7 +102,7 @@ AudioSource:
   m_GameObject: {fileID: 567852611}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 9a4ce1efe05f4480aad71a4ca1f730a7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b7ef5cb88f5814e929d8aa59ec12b4b5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94be49de60fa54d6e92e022525ef5036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movTexture: {fileID: 15200000, guid: 9a4ce1efe05f4480aad71a4ca1f730a7, type: 3}
+  movTexture: {fileID: 15200000, guid: b7ef5cb88f5814e929d8aa59ec12b4b5, type: 3}
 --- !u!1 &681591792
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,46 +296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!1 &1731153995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1731153997}
-  - 114: {fileID: 1731153996}
-  m_Layer: 0
-  m_Name: LoadFirstLevel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1731153996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1731153995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379f2e578e9aa484280b420034d24df2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelToLoad: Level1
---- !u!4 &1731153997
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1731153995}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
---- !u!1001 &1837226620
+--- !u!1001 &1164626305
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -379,7 +340,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: d9b5ce11f064c442db41dccef525857d, type: 2}
-  m_PrefabInternal: {fileID: 1837226620}
+  m_PrefabInternal: {fileID: 1164626305}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1975643586}
@@ -396,7 +357,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: d9b5ce11f064c442db41dccef525857d,
     type: 2}
-  m_PrefabInternal: {fileID: 1837226620}
+  m_PrefabInternal: {fileID: 1164626305}
   m_GameObject: {fileID: 1975643584}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -405,13 +366,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   levelNameFormat: Level{0}
-  totalLevels: 2
+  totalLevels: 5
   finishedGameScene: GameFinished
 --- !u!4 &1975643586
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: d9b5ce11f064c442db41dccef525857d, type: 2}
-  m_PrefabInternal: {fileID: 1837226620}
+  m_PrefabInternal: {fileID: 1164626305}
   m_GameObject: {fileID: 1975643584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}

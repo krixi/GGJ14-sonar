@@ -40,7 +40,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   levelNameFormat: Level{0}
-  totalLevels: 2
+  totalLevels: 5
   finishedGameScene: GameFinished
 --- !u!1001 &100100000
 Prefab:
